@@ -1,29 +1,46 @@
 {{host}}
 
 ###
+@token = {{login.response.body.token}}
 ## Obtenemos todos los usuarios por pagina
+# @name getUsers
 {{host}}/usuario?limite=5&desde=0
+Authorization: {{token}}
 ###
 https://gentle-forest-79499.herokuapp.com/usuario/2
 ###
 post {{host}}/usuario
 Content-Type: application/json
+Authorization: {{token}}
 
 {
-    "nombre": "Test 2",
-    "email": "test2@gmail.com",
+    "nombre": "Test 18",
+    "email": "test18@gmail.com",
     "password": "123456"
 }
 ###
-put {{host}}/usuario/600f776bf83f324c08b6c7b5
+put {{host}}/usuario/60100e17ba11994a6853829f
 Content-Type: application/json
+Authorization: {{token}}
 
 {
-    "nombre": "Pepeto",
+    "nombre": "Pepeto 2",
     "password": "123",
     "google": true,
     "role": "USER_ROLE"
 }
 ###
 ## Borramos un usuario de base de datos
-delete {{host}}/usuario/60100e62ba11994a685382ab
+delete {{host}}/usuario/60100e17ba11994a6853829f
+Authorization: {{token}}
+
+###
+## Login normal
+# @name login
+post {{host}}/login
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "123456"
+}
