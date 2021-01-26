@@ -2,7 +2,7 @@
 
 ###
 ## Obtenemos todos los usuarios por pagina
-{{host}}/usuario?limite=10&desde=0
+{{host}}/usuario?limite=5&desde=0
 ###
 https://gentle-forest-79499.herokuapp.com/usuario/2
 ###
@@ -10,8 +10,8 @@ post {{host}}/usuario
 Content-Type: application/json
 
 {
-    "nombre": "Test 16",
-    "email": "test16@gmail.com",
+    "nombre": "Test 2",
+    "email": "test2@gmail.com",
     "password": "123456"
 }
 ###
