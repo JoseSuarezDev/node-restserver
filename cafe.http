@@ -2,6 +2,7 @@
 
 ###
 @token = {{login.response.body.token}}
+@token = {{Singin.response.body.token}
 ## Obtenemos todos los usuarios por pagina
 # @name getUsers
 {{host}}/usuario?limite=5&desde=0
@@ -14,8 +15,8 @@ Content-Type: application/json
 Authorization: {{token}}
 
 {
-    "nombre": "Test 18",
-    "email": "test18@gmail.com",
+    "nombre": "Test 3",
+    "email": "test3@gmail.com",
     "password": "123456"
 }
 ###
@@ -43,4 +44,14 @@ Content-Type: application/json
 {
     "email": "test1@gmail.com",
     "password": "123456"
+}
+###
+## Login Google
+## Autenticacion por google
+# @name Singin
+post {{host}}/google
+Content-Type: application/json
+
+{
+    "idtoken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImVlYTFiMWY0MjgwN2E4Y2MxMzZhMDNhM2MxNmQyOWRiODI5NmRhZjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNDk2MzUzMzc2NzQ0LTJpbTgyMDE1NnJkYTh1bnM2cWNqZ3VwMmRiZjd0aHNyLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNDk2MzUzMzc2NzQ0LTJpbTgyMDE1NnJkYTh1bnM2cWNqZ3VwMmRiZjd0aHNyLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAzMDczMTk3MzA3NDg1MDQ5MDU4IiwiaGQiOiJzYW50YWJyb3MuY29tLmFyIiwiZW1haWwiOiJsZW9uYXJkb0BzYW50YWJyb3MuY29tLmFyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJ2dzhTTkRlZ0UwWVpQdGU0SnQzUFZnIiwibmFtZSI6Ikxlb25hcmRvIFN1YXJleiIsInBpY3R1cmUiOiJodHRwczovL2xoNi5nb29nbGV1c2VyY29udGVudC5jb20vLWRRMTZNRGRYOXMwL0FBQUFBQUFBQUFJL0FBQUFBQUFBQUFBL0FNWnV1Y21UVzVyRTItelh2VGtycUlsVEhjb091ZkhucFEvczk2LWMvcGhvdG8uanBnIiwiZ2l2ZW5fbmFtZSI6Ikxlb25hcmRvIiwiZmFtaWx5X25hbWUiOiJTdWFyZXoiLCJsb2NhbGUiOiJlbiIsImlhdCI6MTYxMTY5NTMxNiwiZXhwIjoxNjExNjk4OTE2LCJqdGkiOiJkMDhlNjljMWMyOWM2NTVmODY4MzY2ZTI1MTE2YjFiYzYwMTJjZjg3In0.R0CjaEcqeJh5BDDm0JjGiIAwaLntYbYgsP6uoWVPsmI_TkvAZoMg2BQyLPZLFxK7Q_yFzi_2JPdD91onwGnhpJXyqj9_DjPRdm9VS9QIRp2eTHZiv2T1BuApzn_U3nDdEM_wbnnHbYhA3IFF2ydlRKp3aq9huUsHaX3R5UK3ba0GBqJKSsJKvnWZf3Sm3i34Jvnf4wks97Pkww3xENjdjos6ZmHaL67h_aGpbZ3CTlL7vfLBMkYk-UJqmIEiNYjm7vMQv5cfHefbwQeHrcTfCuOuAH8hzsT-fexCprfnykTctQXdTL7kNZBgJCuiEt8HTIwLMlPk8iAgckgfkm8bBQ"
 }
