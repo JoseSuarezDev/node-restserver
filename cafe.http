@@ -1,0 +1,29 @@
+{{host}}
+
+###
+## Obtenemos todos los usuarios por pagina
+{{host}}/usuario?limite=10&desde=0
+###
+https://gentle-forest-79499.herokuapp.com/usuario/2
+###
+post {{host}}/usuario
+Content-Type: application/json
+
+{
+    "nombre": "Test 16",
+    "email": "test16@gmail.com",
+    "password": "123456"
+}
+###
+put {{host}}/usuario/600f776bf83f324c08b6c7b5
+Content-Type: application/json
+
+{
+    "nombre": "Pepeto",
+    "password": "123",
+    "google": true,
+    "role": "USER_ROLE"
+}
+###
+## Borramos un usuario de base de datos
+delete {{host}}/usuario/60100e62ba11994a685382ab
