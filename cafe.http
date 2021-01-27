@@ -2,7 +2,7 @@
 
 ###
 @token = {{login.response.body.token}}
-@token = {{Singin.response.body.token}
+# @token = {{Singin.response.body.token}
 ## Obtenemos todos los usuarios por pagina
 # @name getUsers
 {{host}}/usuario?limite=5&desde=0
